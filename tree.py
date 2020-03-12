@@ -2,7 +2,7 @@ import os
 
 alls = os.listdir()
 
-def checktype()
+def checktype():
     hidden = []
     files = []
     for i in alls:
@@ -11,4 +11,4 @@ def checktype()
         else:
             files.append(i)
 
-userin = input 
+

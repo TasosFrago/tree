@@ -14,7 +14,7 @@ def checktype():
 def instructions():
     print(f"Usage: {sys.argv[0]} [OPTION]... [PATH]\nPATH is optional.Use it if you want the tree of a specific folder.\nBy default it will use the current path you are in.\n\nOptions:\n  -a  for showing all the files in the directory\n --help  for showing instructions\n")
 
-def tree(typef):
+def tree1(typef):
     num = 0
     branch = '├'
     end = '└'
@@ -52,11 +52,11 @@ def main():
         if sys.argv[1] == "--help":
             instructions()
         elif sys.argv[1] == "-a":
-            tree("hidden")
+            tree1("hidden")
         else:
             print("ERROR")
     elif len(sys.argv) == 1:
-        tree("show")
+        tree1("show")
 
 if __name__ == "__main__":
     main()

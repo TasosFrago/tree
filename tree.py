@@ -1,9 +1,13 @@
+#libary for system directories
 import os
+#library that takes arguments by the system's command line
 import sys 
 
+#function that shows the instructions when the user presses "tree --help" in the command line
 def instructions():
     print(f"Usage: {sys.argv[0]} [OPTION]... [PATH]\nPATH is optional.Use it if you want the tree of a specific folder.\nBy default it will use the current path you are in.\n\nOptions:\n  -a  for showing all the files in the directory\n --help  for showing instructions\n")
 
+#function that shows the branches for the directiories
 def tree1(typef):
     num = 0
     branch = '├'
@@ -37,6 +41,7 @@ def tree1(typef):
             elif num == hid:
                 print(f"  {end}{dash}{i}")
 
+#function that combines all the previous functions in order for the program to run
 def main():
     if len(sys.argv) == 2:
         if sys.argv[1] == "--help":
@@ -48,6 +53,7 @@ def main():
     elif len(sys.argv) == 1:
         tree1("show")
 
+#starts the main function
 if __name__ == "__main__":
     main()
 

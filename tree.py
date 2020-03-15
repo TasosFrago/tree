@@ -56,5 +56,4 @@ def main():
 #starts the main function
 if __name__ == "__main__":
     main()
-
-print(f"\nfor instructions,press --help")
+    print(f"\nfor instructions,press --help")

@@ -5,7 +5,7 @@ import sys
 
 #function that shows the instructions when the user presses "tree --help" in the command line
 def instructions():
-    print(f"Usage: {sys.argv[0]} [OPTION]... [PATH]\nPATH is optional, use it if you want the tree of a specific folder.\nBy default it will use the current path you are in.\n\nOptions:\n  -a  for showing the visible and the hidden files in the directory\n --help  for showing instructions\n")
+    print(f"Usage: {sys.argv[0]} [OPTION]... [PATH]\nPATH is optional, use it if you want the tree of a specific folder.\nBy default it will use the current path you are in.\n\nOptions:\n  -a  for showing the visible and the hidden files in the directory\n")
 
 #function that shows the branches for the directiories
 def tree1(typef):

@@ -4,15 +4,14 @@ import os
 import sys 
 
 files = os.listdir()
-num = 0
 branch = '├'
 end = '└'
 dash = '─'
 
 def checktype():
     for i in files:
-        if i[0] != ".":
-            files.append(i)
+        if i[0] == ".":
+            files.remove(i)
 
 
 #function that shows the instructions when the user presses "tree --help" in the command line
@@ -21,15 +20,16 @@ def instructions():
 
 #function that shows the branches for the directiories
 def tree1():
+    num = 0
     filescount = len(files)
     cwd = os.getcwd().split("/")
     print(f"\033[1;34m {cwd[-1]}")
     for i in files:
         num += 1
         if num < filescount:
-            print(f"  {branch}{dash}{i}")
+            print(f"  \033[0;37m{branch}{dash}{i}")
         elif num == filescount:
-            print(f"  {end}{dash}{i}")
+            print(f"  \033[0;37m{end}{dash}{i}")
         else:
             break
 

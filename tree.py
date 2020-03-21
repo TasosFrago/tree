@@ -26,7 +26,7 @@ def checktype():
 
 #function that shows the instructions when the user presses "tree --help" in the command line
 def instructions():
-    print(f"Usage: {sys.argv[0]} [OPTION]... \nThe default path is the current path you are in.\n\nOptions:\n  -a  for showing all the files in the directory\n  -f  followed by the name of a file or directory you want to find\n  --help  for displaing instructions")
+    print(f"Usage: {sys.argv[0]} [OPTION]... \nThe default path is the current path you are in.\n\nOptions:\n  -a  for showing all the files in the directory\n  -f  followed by the name of a file or directory you want to find\n  --help  for displaing instructions\n")
 
 #function that shows the branches for the directiories
 def tree(filename):
@@ -39,14 +39,12 @@ def tree(filename):
         num += 1
         if path.isdir(i) == True:
            color = "\033[1;34m"
-           treegraph(i, color, num)
         elif path.isdir(i) == False:
             color = "\033[0;37m"
-            treegraph(i, color, num)
         if filename != "/":
             if filename == i:
                 color = "\033[1;31m"
-                treegraph(i, color, num)    
+        treegraph(i, color, num)    
     if filename not in sortedlist and filename != "/":
         print(f"\n\033[1;32m[{filename}]{white} does not exist\n")
 

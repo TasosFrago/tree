@@ -17,11 +17,11 @@ def treegraph(i, color, num):
         print(f"  {white}{branch}{dash}{color}{i}{white}")
     elif num == filescount:
         print(f"  {white}{end}{dash}{color}{i}{white}")
-    
+
 
 def checktype():
-    for i in files:
-        if i[0] == ".":
+    for i in os.listdir():
+        if i.startswith('.'):
             files.remove(i)
 
 #function that shows the instructions when the user presses "tree --help" in the command line
@@ -44,7 +44,7 @@ def tree(filename):
         if filename != "/":
             if filename == i:
                 color = "\033[1;31m"
-        treegraph(i, color, num)    
+        treegraph(i, color, num)
     if filename not in sortedlist and filename != "/":
         print(f"\n\033[1;32m[{filename}]{white} does not exist\n")
 

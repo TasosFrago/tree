@@ -2,8 +2,8 @@
 #libary for system directories
 import os
 #library that takes arguments by the system's command line
-import sys 
-from os import path 
+import sys
+from os import path
 
 files = os.listdir()
 branch = '├'
